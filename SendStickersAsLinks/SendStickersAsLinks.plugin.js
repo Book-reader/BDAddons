@@ -353,7 +353,7 @@ const StickerFormatEnum = {
 };
 
 function sendStickerAsLink(sticker, channel) {
-	const content = getStickerUrl(sticker);
+	const content = `[󠄀](${getStickerUrl(sticker)})`;
 
 	if (!Settings.state.sendDirectly) return insertText(content);
 
